@@ -1,12 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tudu</title>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudu</title>
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/599907edde.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="">tudu</a>
+        <h1 class="project-title">All</h1>
+        <div>
+            <button
+                class=" tw-mt-3 tw-px-5 tw-py-1 tw-rounded tw-bg-purple-nav tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">Past done</button>
+            <input type="text" placeholder="Search" name="search" id="search"
+                class="search tw-ml-5 tw-px-3 tw-py-1 tw-rounded tw-bg-purple-nav focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li
+                class="tw-px-5 tw-py-1 tw-rounded tw-bg-purple-nav tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">
+                All</li>
+            <button
+                class="add-project tw-mt-3 tw-px-5 tw-py-1 tw-rounded tw-bg-gradient-to-r tw-from-purple-accent tw-to-purple-accent-r tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">New
+                project</button>
+        </ul>
+        <div class="new-project tw-rounded tw-outline tw-outline-whitegrey">
+            <form>
+                <div>
+                    <label for="project-name">Project name</label>
+                    <input type="text" id="project-name" name="project-name"
+                        class="tw-px-3 tw-py-1 tw-rounded tw-bg-main focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg">
+                </div>
+                <p>Click to choose project(s) to be include in this new project:</p>
+                <div class="choose-container tw-rounded">
+                    <article class="list-choose tw-rounded tw-divide-y tw-divide-purple-accent">
+                        <div class="list-main">
+                            <div class="list-main-project">
+                                <h2 class="list-title">Title</h2>
+                            </div>
+                            <p class="list-priority tw-py-2 tw-rounded tw-pr-3 tw-bg-purple-modal"><span
+                                    class="tw-rounded tw-py-2 tw-px-3 tw-mr-3 tw-bg-whitegrey">Priority</span>High</p>
+                            <p class="list-due-date tw-rounded tw-py-2 tw-pr-3 tw-bg-purple-modal"><span
+                                    class="tw-rounded tw-py-2 tw-px-3 tw-mr-3 tw-bg-whitegrey">Due</span> 12/34/4333</p>
+                        </div>
+                        <!-- <div class="list-expand">
+                                                    <div>
+                                                        <p class="tw-bg-main">Notes</p>
+                                                        <p class="list-notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi natus rem
+                                                            iste nesciunt.</p>
+                                                    </div>
+                                                    <button class="remove tw-rounded tw-px-2 tw-bg-main">Remove</button>
+                                                </div> -->
+                    </article>
+                </div>
+                <button
+                    class="confirm-add-project tw-px-5 tw-py-1 tw-rounded tw-bg-gradient-to-r tw-from-purple-accent tw-to-purple-accent-r tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">Create new project</button>
+                <button
+                    class="close-modal tw-px-5 tw-py-1 tw-rounded tw-bg-main tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-main">Close</button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <button
+            class="add-todo tw-px-5 tw-py-1 tw-rounded tw-bg-gradient-to-r tw-from-purple-accent tw-to-purple-accent-r tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">Add</button>
+        <article class="list tw-rounded tw-divide-y tw-divide-purple-accent">
+            <div class="list-main">
+                <div class="list-main-project">
+                    <h2 class="list-title">Title</h2>
+                </div>
+                <p class="list-priority tw-py-2 tw-rounded tw-pr-3 tw-bg-main"><span class="tw-rounded tw-py-2 tw-px-3 tw-mr-3 tw-bg-whitegrey">Priority</span>High</p>
+                <p class="list-due-date tw-rounded tw-py-2 tw-pr-3 tw-bg-main"><span
+                        class="tw-rounded tw-py-2 tw-px-3 tw-mr-3 tw-bg-whitegrey">Due</span> 12/34/4333</p>
+                <div class="list-main-buttons">
+                    <button class="done tw-bg-whitegrey tw-rounded tw-px-2">Mark as done</button>
+                    <button class="tw-px-2"><i class="fa-solid fa-sort-down"></i></button>
+                </div>
+            </div>
+            <!-- <div class="list-expand">
+                <div>
+                    <p class="tw-bg-main">Notes</p>
+                    <p class="list-notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi natus rem
+                        iste nesciunt.</p>
+                </div>
+                <button class="remove tw-rounded tw-px-2 tw-bg-main">Remove</button>
+            </div> -->
+        </article>
+        <div class="new-todo tw-rounded tw-outline tw-outline-whitegrey">
+            <form>
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="tw-px-3 tw-py-1 tw-rounded tw-bg-main focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg">
+                </div>
+                <div>
+                    <label for="priority">What is the priority?</label>
+                    <select name=" priority" id="priority" class="tw-px-3 tw-py-1 tw-rounded tw-bg-main focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="due-date">Due date</label>
+                    <input type="date" id="due-date" name="due-date" class="tw-px-3 tw-py-1 tw-rounded tw-bg-main focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg">
+                </div>
+                <div>
+                    <label for="notes">Notes</label>
+                    <textarea type="text" id="notes" name="notes" class="tw-h-36 tw-px-3 tw-py-1 tw-rounded tw-bg-main focus:tw-ring-whitegrey focus:tw-ring-2 tw-border-none tw-text-lg"></textarea>
+                </div>
+                <button
+                    class="confirm-add-todo tw-px-5 tw-py-1 tw-rounded tw-bg-gradient-to-r tw-from-purple-accent tw-to-purple-accent-r tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-purple-accent">Add</button>
+                <button
+                    class="close-modal tw-px-5 tw-py-1 tw-rounded tw-bg-main tw-outline tw-outline-2 tw-outline-offset-2 tw-outline-main">Close</button>
+            </form>
+        </div>
+    </main>
+</body>
+
 </html>

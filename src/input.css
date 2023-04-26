@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 75px 1fr / 225px 1fr;
+    grid-template-areas: 
+    "nav header"
+    "nav main";
+    background-color: #200142;
+    font-size: 16px;
+    color: #ececec;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #5000ac;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.project-title {
+    font-size: 1.5rem;
+}
+
+nav {
+    grid-area: nav;
+    padding: 30px 30px;
+    border-right: 1px solid #5000ac;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 1.1rem;
+}
+
+main {
+    grid-area: main;
+    padding: 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    overflow-y: auto;
+}
+
+main::-webkit-scrollbar {
+    width: 16px;
+ }
+
+main::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #ececec;
+    border-radius: 25px;
+    border: 5px solid #200142;
+}
+
+.choose-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 20px;
+    background-color: #200142;
+    gap: 20px;
+    height: 40vh;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+.choose-container::-webkit-scrollbar {
+    width: 16px;
+ }
+
+.choose-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.choose-container::-webkit-scrollbar-thumb {
+    background: #ececec;
+    border-radius: 25px;
+    border: 5px solid #200142;
+}
+
+.list-choose {
+    display: flex;
+    background-color: #5e03be;
+    flex-direction: column;
+    padding: 10px 20px;
+    min-width: 750px;
+    gap: 10px;
+}
+
+.list {
+    display: flex;
+    background-color: #36026e;
+    flex-direction: column;
+    padding: 10px 20px;
+    min-width: 750px;
+    gap: 10px;
+}
+
+.list-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.list-expand {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.list-expand div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.list-main-project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.list-main-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.list-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.list-due-date span, .list-priority span {
+    color: #200142;
+    font-weight: 500;
+}
+
+.add-todo {
+    align-self: flex-start;
+}
+
+.done {
+    color: #200142;
+    font-weight: 600;
+}
+
+.new-project {
+    padding: 64px;
+    background-color: #350072;
+    position: fixed;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: transform .3s ease-in-out, opacity .4s ease;
+    transform: translate(-50%, -100%);
+    pointer-events: none;
+    opacity: 0%;
+    font-size: 1.3rem;
+    min-height: 800px;
+}
+
+.new-project.show {
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+    pointer-events: all;
+}
+
+.new-todo {
+    padding: 64px;
+    background-color: #350072;
+    position: fixed;
+    width: 25vw;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: transform .3s ease-in-out, opacity .4s ease;
+    transform: translate(-50%, -100%);
+    pointer-events: none;
+    opacity: 0%;
+    font-size: 1.3rem;
+}
+
+.new-todo.show {
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+    pointer-events: all;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form button {
+    align-self: stretch;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form > div > div {
+    display: flex;
+    align-items: center;
+}
+
+form textarea {
+    resize: none;
+    align-self: stretch;
+}
